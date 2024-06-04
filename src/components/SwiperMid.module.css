@@ -1,0 +1,58 @@
+#app { height: 100% }
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 400px;
+  background: #000;
+}
+
+.swiperSlide1 {
+  font-size: 18px;
+  color: #000000;
+  
+
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 20px 40px;
+}
+
+.parallaxBg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 130%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+ 
+}
+
+.swiperSlide1 .title {
+  font-size: 41px;
+  font-weight: 300;
+}
+
+.swiperSlide1 .subtitle {
+  font-size: 21px;
+}
+
+.swiperSlide1 .text {
+  font-size: 14px;
+  max-width: 400px;
+  line-height: 1.3;
+}
