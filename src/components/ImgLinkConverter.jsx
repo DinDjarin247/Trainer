@@ -52,7 +52,7 @@ const ImgLinkConverter = ({ onUpload }) => {
         borderRadius: 8,
         padding: 20,
         textAlign: "center",
-        marginBottom: 20,
+        marginBottom: 7,
       }}
     >
       <Typography variant="body1" mb={2}>

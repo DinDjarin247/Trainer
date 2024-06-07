@@ -30,9 +30,10 @@ const ProfUpdate = () => {
   const [classStartDate, setClassStartDate] = useState("");
   const [chipCartData, setChipCartData] = useState([]);
   const location = useLocation();
+  const { personId } = location.state;
+
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
-  const { personId } = location.state;
 
   useEffect(() => {
     const fetchPersonData = async () => {

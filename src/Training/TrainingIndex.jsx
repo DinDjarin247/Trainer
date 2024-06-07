@@ -30,7 +30,15 @@ const TrainingIndex = () => {
 
       <div className="container">
         {trainings.map((training, index) => (
-          <div className="item" key={index}>
+          <div
+            className="item"
+            style={{
+              border: "1px solid black",
+              padding: "10px",
+              display: "flex",
+            }}
+            key={index}
+          >
             <TrainingCard
               name={training.name}
               price={training.price}

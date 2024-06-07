@@ -33,11 +33,11 @@ const TrainingTag = ({ sendChip }) => {
 
   const handleDelete = (chipTodelete) => async () => {
     try {
-      await fetch(`http://localhost:5000/trainingShow/${chipTodelete.id}`, {
+      await fetch(`http://localhost:5000/trainingShow/${chipTodelete.tagId}`, {
         method: "DELETE",
       });
       setChipData((chips) =>
-        chips.filter((chip) => chip.id !== chipTodelete.id)
+        chips.filter((chip) => chip.tagId !== chipTodelete.tagId)
       );
     } catch (error) {
       console.error("Error:", error);
@@ -63,6 +63,7 @@ const TrainingTag = ({ sendChip }) => {
       const newChip = await response.json();
       setChipData([...chipData, newChip]);
       setInputValue("");
+      console.log(newChip, "PT");
     } catch (error) {
       console.error("Error:", error);
     }
@@ -80,15 +81,15 @@ const TrainingTag = ({ sendChip }) => {
   };
 
   const handleClick = (chip) => {
-    console.log(`You clicked ${chip.label}, ${chip.id} Chip.`, chip);
-    if (chipCartData.some((cartChip) => cartChip.id === chip.id)) return;
+    console.log(`You clicked ${chip.label}, ${chip.tagId} Chip.`, chip);
+    if (chipCartData.some((cartChip) => cartChip.tagId === chip.tagId)) return;
 
     setChipCartData([...chipCartData, chip]);
   };
 
   const handleDeleteCart = (chipToDelete) => () => {
     setChipCartData((chips) =>
-      chips.filter((chip) => chip.id !== chipToDelete.id)
+      chips.filter((chip) => chip.tagId !== chipToDelete.tagId)
     );
   };
 

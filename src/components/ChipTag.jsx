@@ -62,6 +62,7 @@ const ChipTag = ({ sendChip }) => {
       const newChip = await response.json();
       setChipData([...chipData, newChip]);
       setInputValue("");
+      console.log(newChip, "Person");
     } catch (error) {
       console.error("Error:", error);
     }

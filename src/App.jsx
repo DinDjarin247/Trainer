@@ -13,6 +13,7 @@ import TrainingIndex from "./Training/TrainingIndex";
 import ProfSearch from "./components/ProfSearch";
 import "@/App.css";
 import ProfUpdate from "./components/ProfUpdate";
+import TrainingJoin from "./Training/TrainingJoin";
 function App() {
   return (
     <Router>
@@ -26,6 +27,7 @@ function App() {
         <Route path="/TrainingIndex" element={<TrainingIndex />} />
         <Route path="/search" element={<ProfSearch />} />
         <Route path="/ProfUpdate" element={<ProfUpdate />} />
+        <Route path="/ProfJoin" element={<TrainingJoin />} />
         <Route path="/" element={<Home />} /> {/* Home 컴포넌트와 연결 */}
       </Routes>
       <Footer />

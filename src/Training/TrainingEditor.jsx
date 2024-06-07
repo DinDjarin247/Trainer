@@ -163,7 +163,6 @@ const TrainingEditor = ({ addTraining }) => {
               </ul>
             </Paper>
             <ImgLinkConverter onUpload={handleAddImage} />
-
             <Button variant="outlined" onClick={handleOpen}>
               Select Term
             </Button>

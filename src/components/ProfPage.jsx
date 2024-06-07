@@ -77,6 +77,15 @@ const ProfPage = ({
     });
     console.log(personId, "go update");
   };
+
+  const hadleGOTrainingJoin = () => {
+    navigate("/ProfJoin", {
+      state: {
+        personId,
+      },
+    });
+    console.log(personId, " go Train join");
+  };
   return (
     <Box
       sx={{
@@ -194,7 +203,7 @@ const ProfPage = ({
             <Button
               variant="outlined"
               color="neutral"
-              onClick={() => setOpen(true)}
+              onClick={hadleGOTrainingJoin}
             >
               수강
             </Button>
